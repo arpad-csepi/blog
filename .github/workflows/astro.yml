@@ -9,6 +9,10 @@ on:
   push:
     paths-ignore:
       - "src/content/drafts/**"
+      - ".github/**"
+      - ".vscode/**"
+      - ".gitignore"
+      - "README.md"
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
