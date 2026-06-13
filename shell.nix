@@ -2,10 +2,10 @@
 
 pkgs.mkShell {
   buildInputs = [
-    pkgs.bun
+    pkgs.deno
   ];
 
   shellHook = ''
-    bun install
+    deno install
   '';
 }
