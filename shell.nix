@@ -1,11 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
 
 pkgs.mkShell {
-  buildInputs = [
-    pkgs.deno
+  packages = with pkgs; [
+    deno
+    git
+    just
   ];
-
-  shellHook = ''
-    deno install
-  '';
 }
