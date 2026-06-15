@@ -1,22 +1,16 @@
 # Astro Starter Kit: Blog
 
 ```sh
-npm create astro@latest -- --template blog
+deno create astro@latest -- --template blog
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
-
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
 
 Features:
 
 - ✅ Minimal styling (make it your own!)
 - ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ SEO-friendly with canonical URLs and Open Graph data
 - ✅ Sitemap support
 - ✅ RSS Feed support
 - ✅ Markdown & MDX support
@@ -28,6 +22,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 ├── public/
 ├── src/
+│   ├── assets/
 │   ├── components/
 │   ├── content/
 │   ├── layouts/
@@ -52,12 +47,12 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `deno install`             | Installs dependencies                            |
+| `deno dev`             | Starts local dev server at `localhost:4321`      |
+| `deno build`           | Build your production site to `./dist/`          |
+| `deno preview`         | Preview your build locally, before deploying     |
+| `deno astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `deno astro -- --help` | Get help using the Astro CLI                     |
 
 ## 👀 Want to learn more?
 
