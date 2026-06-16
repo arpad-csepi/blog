@@ -2,7 +2,7 @@
 
 pkgs.mkShell {
   packages = with pkgs; [
-    deno
+    nodejs
     git
     just
   ];
