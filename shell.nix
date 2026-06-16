@@ -4,6 +4,6 @@ pkgs.mkShell {
   packages = with pkgs; [
     nodejs
     git
-    just
+    pnpm
   ];
 }

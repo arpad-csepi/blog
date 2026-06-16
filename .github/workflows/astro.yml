@@ -40,20 +40,26 @@ jobs:
 
       # TODO: Use nix shell
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: latest
+
       - name: Setup node
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
+          cache: 'pnpm'
       
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
-        run: "npm install"
+        run: "pnpm install"
 
       - name: Build step
-        run: "npm run build"
+        run: "pnpm run build"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
