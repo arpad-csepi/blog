@@ -34,6 +34,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-slim
+    timeout-minutes: 5
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -49,17 +51,23 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          cache: 'pnpm'
-      
+          cache: "pnpm"
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Install dependencies
-        run: "pnpm install"
+        run: pnpm install --frozen-lockfile
 
-      - name: Build step
-        run: "pnpm run build"
+      - name: "Lint code"
+        run: pnpm run lint
+
+      - name: "Checking code format"
+        run: pnpm run format:check
+
+      - name: "Build the project"
+        run: pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
