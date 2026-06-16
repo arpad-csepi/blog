@@ -2,12 +2,21 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders, svgoOptimizer } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://doas.best',
 	integrations: [mdx(), sitemap()],
+	prerenderConflictBehavior: 'error',
+	prefetch: {
+		prefetchAll: true,
+		defaultStrategy: 'viewport'
+	},
+	image: {
+		dangerouslyProcessSVG: true,
+		responsiveStyles: true
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),
@@ -32,4 +41,17 @@ export default defineConfig({
 			},
 		},
 	],
+	experimental: {
+		clientPrerender: true,
+		contentIntellisense: true,
+		svgOptimizer: svgoOptimizer({
+			multipass: true,
+			floatPrecision: 2,
+		}),
+		queuedRendering: {
+			enabled: true,
+			contentCache: true
+		},
+		rustCompiler: true
+	},
 });
