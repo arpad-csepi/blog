@@ -13,8 +13,8 @@ type Props = {
   class?: string;
   size?: "sm" | "lg";
   pubDatetime: string | Date;
-  timezone?: string;
-  modDatetime?: string | Date | null;
+  timezone?: string | undefined;
+  modDatetime?: string | Date | null | undefined;
 };
 
 const {

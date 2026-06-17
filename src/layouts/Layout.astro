@@ -8,10 +8,10 @@ import config from "@/config";
 import "@/styles/global.css";
 
 type Props = {
-  title?: string;
-  description?: string;
-  ogImage?: string;
-  canonicalURL?: string;
+  title?: string | undefined;
+  description?: string | undefined;
+  ogImage?: string | undefined;
+  canonicalURL?: string | undefined;
 };
 
 const { site } = config;
