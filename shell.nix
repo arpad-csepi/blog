@@ -5,5 +5,6 @@ pkgs.mkShell {
     nodejs
     git
     pnpm
+    prettier
   ];
 }
