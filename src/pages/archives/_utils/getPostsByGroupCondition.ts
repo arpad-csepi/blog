@@ -9,8 +9,7 @@ export function getPostsByGroupCondition(
 ) {
   const result: Record<GroupKey, CollectionEntry<"posts">[]> = {};
 
-  for (let i = 0; i < posts.length; i++) {
-    const item = posts[i];
+  for (const [i, item] of posts.entries()) {
     const groupKey = groupFunction(item, i);
 
     if (!result[groupKey]) {
