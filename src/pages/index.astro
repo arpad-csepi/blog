@@ -92,7 +92,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
             {t.home.featured}
           </h2>
           <ul>
-            {featuredPosts.map(data => (
+            {featuredPosts.slice(0, postsConfig.perFeatured).map(data => (
               <Card variant="h3" {...data} />
             ))}
           </ul>

@@ -24,7 +24,9 @@ interface SiteConfig {
 interface PostsConfig {
   /** Posts per page on paginated listing pages */
   perPage?: number;
-  /** Posts shown on the index/home page */
+  /** Featured posts shown on the index/home page */
+  perFeatured?: number;
+  /** Recent posts shown on the index/home page */
   perIndex?: number;
   /**
    * Scheduled posts within this window (ms) of their pubDatetime
